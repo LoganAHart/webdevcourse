@@ -144,3 +144,22 @@ a) Load scripts asynchronously & defer loading of scripts
 b) Minimize DOM manipulation
 
 c) Avoid long running Javascript
+
+## HTTP/2
+
+Server requests are faster with HTTP 2 (compared to HTTP), so file bundles may not result in substantially faster requests. HTTP/2 performance optimizations covered in another section performance part 2.
+
+```js
+const htt2 = require('http2');
+const fs = require('fs');
+
+const options = {
+  key: fs.readFileSync('./selfsigned.key'),
+  cert: fs.readFileSync('./selfsigned.crt'),
+};
+
+const server = http2.createSecureServer(options, (req, res) => {
+  res.setHeader('Content-Type', 'text/html');
+  res.end('ok');
+});
+```
