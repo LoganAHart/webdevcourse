@@ -8,7 +8,7 @@ const Scroll = ({ children }) => {
         border: '0.1rem solid black',
         padding: '1rem',
         'marginTop': '1rem',
-        height: '50rem',
+        height: '80vh',
       }}
     >
       {children}
