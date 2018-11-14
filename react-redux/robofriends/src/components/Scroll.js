@@ -5,7 +5,8 @@ const Scroll = ({ children }) => {
     <div 
       style={{
         overflowY: 'scroll',
-        border: '0.1rem solid black',
+        borderTop: '0.1rem solid black',
+        borderBottom: '0.1rem solid black',
         padding: '1rem',
         'marginTop': '1rem',
         height: '80vh',
